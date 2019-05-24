@@ -23,11 +23,11 @@
 * Soft max is the function, which calulates the probability like output describing the likelyness of the pridicted class.
 * This is calculated exponentially as e^a/(e^a+e^b+e^c).
 * Due to this calculation the output is more softened when compared to the classification/pridiction of logits from the penultimate layer 
-### 7.  Learning Rate></br>
+### 7.  Learning Rate</br>
 * Learning rate is the rate at which the parameters are adjusting such that the error is reduced.
 * It can also be visualized as the steps that a gradient descent or any similar loss minimization algorithm adjusts its weights, step by step.
 ### 8.  Kernels and how do we decide the number of kernels</br>
-**Kernals are the filters or feature extractors, that are used to extract the significant features.*
+*Kernals are the filters or feature extractors, that are used to extract the significant features.*
 * The Number of kernals is decided based on the number of channels that we are expecting to extract or the number of classes that are required to be clasified.
 ### 9.  Batch Normalization</br>
 ### 10.  Image Normalization</br>
