@@ -72,9 +72,24 @@
 * The reason for this is also the same, like , Batch normalization is also a way considered as introducing noise, inorder to maintain values at one scale.
 * so it is better not to do this at the last two layers, as we may taamper the important information, which is needed for prediction.
 ### 19.  When do we stop convolutions and go ahead with a larger kernel or some other alternative (which we have not yet covered)</br>
-
+* When the object that we need to predict with in a image, cannot be shrinked to very less size like 5x5 or 3x3, i.e only very few number of pixels do not carry much useful data, after so many convolutions.
+* So it is best to stop convolutions when you reached a very small size like 5x5 or 3x3, and use a bigger kernal like 5x5x or 7x7.
+* The other alternatives are using a pooling layers like Global average pooling.
+* One more alternative is using padding = same
 ### 20.  How do we know our network is not going well, comparatively, very early</br>
+* we can analyse the model, by looking at the loss reduction & the differences in accruacy of prediction between epochs
 ### 21.  Batch Size, and effects of batch size</br>
+* Batch size is the number of images that are scanned by the model, before doing a back propagation step.
+* Ideally the batch size should be more than the number of distinct classes for prediction.
+* depending on GPU capacity, if the batch size is increased, the time taken per epoch reduces.
 ### 22.  When to add validation checks</br>
+* Validation checks can be added, when have reached the best accuracies.
+* we can save the best validation accuracy of the model.
 ### 23.  LR schedule and concept behind it</br>
+* Learning rate schedule is used to change the learning rate between the epochs.
+* it can be gradually reduced, so that as we approch the minimum loss point, if we reduce the step size or learning rate, we have a better chance to reach global minima, and acheive Good accuracy.
+
 ### 24.  Adam vs SGD</br>
+* SGD or stochastic gradient descent optimizer is a varient of Gradient descent where the learning rate is constant through the training process. The weights are updated based on the calculations on few random samplefrom the dataset.
+* Adam is a Optimizer which is a combination of RMS PROP i.e calculating the Root Mean square averages and in effect adjusts the learning rate automatically.
+It consists of parameters beta1 and beta2 which control the Decay in the learing rate. 
