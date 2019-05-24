@@ -1,6 +1,11 @@
 # Architectural Basics</br>
 ### 1.  How many layers</br>
+* The number of layers in a CNN depends on the size of the input image and the content that we want to detect
+* we need to add as many convolution layers needed, until we read the complete image
 ### 2.  MaxPooling</br>
+* Max pooling is taking the maximum number/pixel value to the next layer. For a 2x2 Maxpool size, it results the maximum pixel value of the 4 pixels
+* Max Pooling there by reduces the image size by half, but retains the Loudest information from the pixels
+* This helps by reducing the number of convolution layers required to read the entire image
 ### 3.  1x1 Convolutions</br>
 ### 4.  3x3 Convolutions</br>
 ### 5.  Receptive Field</br>
