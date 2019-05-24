@@ -27,12 +27,25 @@
 * Learning rate is the rate at which the parameters are adjusting such that the error is reduced.
 * It can also be visualized as the steps that a gradient descent or any similar loss minimization algorithm adjusts its weights, step by step.
 ### 8.  Kernels and how do we decide the number of kernels</br>
-*Kernals are the filters or feature extractors, that are used to extract the significant features.*
+* Kernals are the filters or feature extractors, that are used to extract the significant features.*
 * The Number of kernals is decided based on the number of channels that we are expecting to extract or the number of classes that are required to be clasified.
 ### 9.  Batch Normalization</br>
+* Batch Normalization is used to normalize the values of the kernals such that all of them fall into a similar range/scale.
+* This useful because if the activation in the hidden layers are of different magnitudes, then the learning will be uneven for few features.
+* Batch normalization is can be on the channels or on the kernals.
 ### 10.  Image Normalization</br>
+* Image normalization is the concept of computer vision domain, which is used to enhance the images which have bad contrast etc..
+* The image is enhanced as the all the values are normailised based on difference between the highest and least contrast values.
+* This is also the techinque similar to histogram normalization
 ### 11.  Position of MaxPooling</br>
+* MaxPooling is used to reduce the size of the image to 25% considering the 2x2 filter which gives the maximum value of the 4 pixels.
+* It helps in reducing the number of convolutions required, without compromizing much on the image information.
+* But if the Maxpooling is done in the initial layers of the convolution, then there is possibility of loosing of whatever the kernals have learnt till that level.
+* so Postion of maxpooling is suggested to be at a place where at least the edges & gradients have been extracted. (normally at receptive feild of 9 or 11)
+* This inturn depends on the image size as well.
+
 ### 12.  Concept of Transition Layers</br>
+
 ### 13.  Position of Transition Layer</br>
 ### 14.  Number of Epochs and when to increase them</br>
 ### 15.  DropOut</br>
