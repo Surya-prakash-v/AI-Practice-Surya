@@ -45,14 +45,34 @@
 * This inturn depends on the image size as well.
 
 ### 12.  Concept of Transition Layers</br>
-
+* Transition layers or Transition blocks are nothing but the different other type of operations that are performed on images between convolution layers or convolution blocks.
+* For example, Batch Normalization, Maxpooling, dropouts, 1x1 convolution, average pooling etc..
 ### 13.  Position of Transition Layer</br>
+* Transition layers are placed between convolution blocks or convolution layers.
+* They should not be used before the last prediction layer.
 ### 14.  Number of Epochs and when to increase them</br>
+* Epochs are the iterations of the training of the model, one epoch / iteration is the model scanning through all the training data one time.
+* Number of epochs determine how much the model is learning.
+* we can increase the number of epochs as long as the loss is reducing and the train accuracy is improving.
+* once the model has reached a state of over-fitting/ underfitting & the train accuracy is not improving anymore, the loss is not reducing, then there is no use of increasing the epochs.
 ### 15.  DropOut</br>
+* Dropout is the concept where few of the neurons are neglected when extracting features to the next layer.
+* As few neurons are ignored, there is a forced need on the other neurons to do the prediction on their own, to try not to reduce the accuracy.
+* This makes the neurons learn better.
+* Also, this prevents the model to overfit, as the training accuracy is reduced a little & provides scope for learning.
 ### 16.  When do we introduce DropOut, or when do we know we have some overfitting</br>
+* When the loss is not reducing any further & the accurcy is not improving any further, it means model is not learning.
+* In this case dropout can be used.
+* We know that the model is overfitting when the training accuracy is more & the test accuracy is lagging.
 ### 17.  The distance of MaxPooling from Prediction</br>
+* MaxPooling should not be very close to the prediction layers, because as we know maxpooling is reducing the information to 25% of existing information.
+* So when we are close to prediction, if we loose that much information, the prediction can go wrong.
 ### 18.  The distance of Batch Normalization from Prediction</br>
+* Batch Normalization also should be avoided atleast at the last layer or prediction layer & a layer before it as well.
+* The reason for this is also the same, like , Batch normalization is also a way considered as introducing noise, inorder to maintain values at one scale.
+* so it is better not to do this at the last two layers, as we may taamper the important information, which is needed for prediction.
 ### 19.  When do we stop convolutions and go ahead with a larger kernel or some other alternative (which we have not yet covered)</br>
+
 ### 20.  How do we know our network is not going well, comparatively, very early</br>
 ### 21.  Batch Size, and effects of batch size</br>
 ### 22.  When to add validation checks</br>
